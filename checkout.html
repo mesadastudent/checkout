@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>Checkout</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.cdnfonts.com" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="main-container">
+                <div class="logo"><img src="images/logo.svg"></div>
+
+                <div class="exp">
+                    <div class="exp-title"><span>Express checkout</span></div>
+                    <div class="exp-checkout">
+                        <button class="btn paypal"><img src="images/paypal-logo.svg"></button>
+                        <button class="btn apple"><img src="images/applepay-logo.svg"></button>
+                    </div>
+                    <div class="divider"><span>Or</span></div>
+                </div>
+
+                <p>Continue below to pay with a credit card</p>
+                <div class="section">
+                    <p class="section-title">Contact Information</p>
+                    <input type="email" id="email" placeholder="Email Address" name="email">
+                    <div class="checkbox">
+                        <input type="checkbox" id="subscribe" name="subscribe" value="news&offers">
+                        <label>Email me with news and offers</label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <p class="section-title">Shipping Address</p>
+
+                    <div class="row">
+                        <div><input type="text" id="fname" placeholder="First name" name="fname"></div>
+                        <div><input type="text" id="lname" placeholder="Last name" name="lname"></div>
+                    </div>
+
+                    <select id="country" name="country" class="country-select">
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="fr">France</option>
+                    </select>
+
+                    <input type="text" id="address" placeholder="Address" name="address">
+                    <input type="text" id="address1" placeholder="Apartment, suite, etc. (optional)" name="address1">
+
+                    <div class="row">
+                        <div><input type="text" id="city" placeholder="City" name="city"></div>
+                        <div><input type="text" id="state" placeholder="State" name="state"></div>
+                        <div><input type="text" id="zip" placeholder="Zip code" name="zip"></div>
+                    </div>
+
+                    <input type="text" id="phone" placeholder="Phone" name="phone">
+                </div>
+
+                <div class="section">
+                    <p class="section-title">Billing Address</p>
+
+                    <div class="radio">
+                        <input type="radio" id="sbilling"> Same as shipping address
+                    </div>
+                    <div class="radio">
+                        <input type="radio" id="dbilling"> Use a different billing address
+                    </div>
+
+                    <div class="row">
+                        <div><input type="text" id="fname" placeholder="First name" name="fname"></div>
+                        <div><input type="text" id="lname" placeholder="Last name" name="lname"></div>
+                    </div>
+
+                    <select id="country" name="country" class="country-select">
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="fr">France</option>
+                    </select>
+
+                    <input type="text" id="address" placeholder="Address" name="address">
+                    <input type="text" id="address1" placeholder="Apartment, suite, etc. (optional)" name="address1">
+
+                    <div class="row">
+                        <div><input type="text" id="city" placeholder="City" name="city"></div>
+                        <div><input type="text" id="state" placeholder="State" name="state"></div>
+                        <div><input type="text" id="zip" placeholder="Zip code" name="zip"></div>
+                    </div>
+
+                    <input type="text" id="phone" placeholder="Phone" name="phone">
+                </div>
+
+                <div class="section">
+                    <p class="section-title">Shipping Method</p>
+                    <div class="radio">
+                        <input type="radio" id="shippingmethod"> Tracked & Insured
+                    </div>
+                </div>
+
+
+                <div class="section">
+                    <p class="section-title">Payment Information</p>
+                    <p class="section-sub-title">All transactions are secure and encrypted.</p>
+
+                    <div class="radio">
+                        <input type="radio" id="dbilling"> Credit Card
+                    </div>
+
+                    <input type="text" id="creditNum" placeholder="Card Number" name="creditNum">
+                    <input type="text" id="creditName" placeholder="Name on card" name="creditName">
+
+                    <div class="row">
+                        <div><input type="text" id="creditExp" placeholder="Expiry date (MM / YY)" name="creditExp"></div>
+                        <div><input type="text" id="creditSec" placeholder="Security code" name="creditSec"></div>
+                    </div>
+
+                    <div class="radio">
+                        <input type="radio" id="paypal"> Paypal
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="subscribe" name="subscribe" value="news&offers">
+                    <label>Get 25% OFF on Your Next Order</label>
+                </div>
+                <span> Want exclusive deals? Check this box to receive the best offers to your phone. You can reply STOP to cancel or HELP for help. Msg frequency varies. Msg & data rates may apply. See Terms & Privacy.</span>
+            </div>
+
+
+            <div class="sub-container">
+                <div class="section">
+                    <p class="section-title">Order Summary</p>
+                    
+                    <div>
+                        <div class="item">
+                            <div class="iten-info">
+                                <img class="item-img" src="images/item1.png">
+                                <span class="item-qty">1</span>
+                            </div>
+                        </div>
+                    </div>
+                <div> 
+            </div>          
+        </div>
+    </body>
+</html>
