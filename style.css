@@ -12,6 +12,20 @@ body {
     margin: 0px;
 }
 
+.text-sm {
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;  
+}
+
+.text-md {
+    font-size: 14px;
+}
+
+.text-lg {
+    font-size: 16px;
+}
+
 .container {
     display: flex;
 }
@@ -81,7 +95,7 @@ body {
 }
 
 .divider {
-    position: flex;
+    position: relative;
     text-align: center;
     color: #292929;
     font-size: 13px;
@@ -97,7 +111,10 @@ body {
 
 .divider::before, .divider::after{
     content: "";
-    flex: 1;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
     height: 1px;
     background-color: #BBBBBB;
 }
@@ -110,12 +127,18 @@ body {
     background-color: 000000;
 }
 
+.section {
+    margin-bottom: 30px;
+}
+
 .section-title {
     font-weight: 600;
     color: 292929;
+    margin-block: 5px;
 }
 
 input, select, button {
+    font-family: 'Avenir LT Pro';
     padding: 10px;
     margin: 6px 0;
     border: 1px solid #D9D9D9;
@@ -134,6 +157,10 @@ input[type="radio"] {
     width: auto;
 }
 
+input[type="radio"] {
+    accent-color: black;
+}
+
 .checkbox {
     display: flex;
     align-items: center;
@@ -143,13 +170,71 @@ input[type="radio"] {
     padding-left: 5px;
 }
 
+.offers {
+    font-family: 'Abel';
+    font-size: 14px;
+    color: #737373;
+}
+
 .row {
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
 .row div {
     flex: 1;
+}
+
+.shipping {
+    border: 1px solid #BBBBBB;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.billing {
+    border: 1px solid #BBBBBB;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.billing-fields {
+    display: none;
+    padding: 16px;
+    background-color: #FAFAFA;
+}
+
+.payment {
+    border: 1px solid #BBBBBB;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.credit-fields {
+    display: none;
+    padding: 16px;
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.continue {
+    justify-self: center;
+    color: 292929
+}
+.complete {
+    background-color: 000000;
+    color: white;
+    width: 300px;
 }
 
 .sub-container {
@@ -223,4 +308,28 @@ input[type="radio"] {
 
 #disc {
     margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        display: inline;
+    }
+    
+    .main-container {
+        background-color: white;
+        width: 90%;
+        height: 100%;
+        padding-inline: 15px;
+        padding-block: 40px;
+        overflow-y: auto;
+    }
+
+    .sub-container {
+        background-color: white;
+        width: 90%;
+        height: 100%;
+        padding-inline: 15px;
+        padding-block: 40px;
+        overflow-y: auto;
+    }
 }

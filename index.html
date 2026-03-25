@@ -3,7 +3,8 @@
         <title>Checkout</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.cdnfonts.com" rel="stylesheet">
-        <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+        <script type="text/javascript" src="main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
         <body>
         <div class="container">
@@ -19,13 +20,13 @@
                     <div class="divider"><span>Or</span></div>
                 </div>
 
-                <p>Continue below to pay with a credit card</p>
+                <p class="continue">Continue below to pay with a credit card</p>
                 <div class="section">
                     <p class="section-title">Contact Information</p>
                     <input type="email" id="email" placeholder="Email Address" name="email">
-                    <div class="checkbox">
+                    <div>
                         <input type="checkbox" id="subscribe" name="subscribe" value="news&offers">
-                        <label>Email me with news and offers</label>
+                        <label class="offers">Email me with news and offers</label>
                     </div>
                 </div>
 
@@ -58,69 +59,86 @@
                 <div class="section">
                     <p class="section-title">Billing Address</p>
 
-                    <div class="radio">
-                        <input type="radio" id="sbilling"> Same as shipping address
+                    <div class="billing">
+                        <div class="radio">
+                            <input type="radio" id="sbilling" name="billing" value="same"> Same as shipping address
+                        </div>
+                        <div class="radio">
+                            <input type="radio" id="dbilling" name="billing" value="different"> Use a different billing address
+                        </div>
+
+                        <div id="diffFields" class="billing-fields">
+                            <div class="row">
+                                <div><input type="text" id="fname" placeholder="First name" name="fname"></div>
+                                <div><input type="text" id="lname" placeholder="Last name" name="lname"></div>
+                            </div>
+
+                            <select id="country" name="country" class="country-select">
+                                <option value="us">United States</option>
+                                <option value="ca">Canada</option>
+                                <option value="fr">France</option>
+                            </select>
+
+                            <input type="text" id="address" placeholder="Address" name="address">
+                            <input type="text" id="address1" placeholder="Apartment, suite, etc. (optional)" name="address1">
+
+                            <div class="row">
+                                <div><input type="text" id="city" placeholder="City" name="city"></div>
+                                <div><input type="text" id="state" placeholder="State" name="state"></div>
+                                <div><input type="text" id="zip" placeholder="Zip code" name="zip"></div>
+                            </div>
+
+                            <input type="text" id="phone" placeholder="Phone" name="phone">
+                        </div>
                     </div>
-                    <div class="radio">
-                        <input type="radio" id="dbilling"> Use a different billing address
-                    </div>
-
-                    <div class="row">
-                        <div><input type="text" id="fname" placeholder="First name" name="fname"></div>
-                        <div><input type="text" id="lname" placeholder="Last name" name="lname"></div>
-                    </div>
-
-                    <select id="country" name="country" class="country-select">
-                        <option value="us">United States</option>
-                        <option value="ca">Canada</option>
-                        <option value="fr">France</option>
-                    </select>
-
-                    <input type="text" id="address" placeholder="Address" name="address">
-                    <input type="text" id="address1" placeholder="Apartment, suite, etc. (optional)" name="address1">
-
-                    <div class="row">
-                        <div><input type="text" id="city" placeholder="City" name="city"></div>
-                        <div><input type="text" id="state" placeholder="State" name="state"></div>
-                        <div><input type="text" id="zip" placeholder="Zip code" name="zip"></div>
-                    </div>
-
-                    <input type="text" id="phone" placeholder="Phone" name="phone">
                 </div>
 
                 <div class="section">
                     <p class="section-title">Shipping Method</p>
-                    <div class="radio">
-                        <input type="radio" id="shippingmethod"> Tracked & Insured
+                    
+                    <div class="shipping">
+                        <div class="radio">
+                            <input type="radio" id="shippingmethod"> Tracked & Insured
+                        </div>
                     </div>
                 </div>
 
 
                 <div class="section">
                     <p class="section-title">Payment Information</p>
-                    <p class="section-sub-title">All transactions are secure and encrypted.</p>
+                    <p class="text-md">All transactions are secure and encrypted.</p>
 
-                    <div class="radio">
-                        <input type="radio" id="dbilling"> Credit Card
+                    <div class="payment">
+                        <div class="radio">
+                            <input type="radio" id="credit" name="payment" value="credit"> Credit Card
+                        </div>
+
+                        <div id="creditFields" class="credit-fields">
+                            <input type="text" id="creditNum" placeholder="Card Number" name="creditNum">
+                            <input type="text" id="creditName" placeholder="Name on card" name="creditName">
+
+                            <div class="row">
+                                <div><input type="text" id="creditExp" placeholder="Expiry date (MM / YY)" name="creditExp"></div>
+                                <div><input type="text" id="creditSec" placeholder="Security code" name="creditSec"></div>
+                            </div>
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" id="paypal" name="payment" value="paypal"> Paypal
+                        </div>
                     </div>
 
-                    <input type="text" id="creditNum" placeholder="Card Number" name="creditNum">
-                    <input type="text" id="creditName" placeholder="Name on card" name="creditName">
-
-                    <div class="row">
-                        <div><input type="text" id="creditExp" placeholder="Expiry date (MM / YY)" name="creditExp"></div>
-                        <div><input type="text" id="creditSec" placeholder="Security code" name="creditSec"></div>
+                    <div style="padding-top: 15px;">
+                        <input type="checkbox" id="subscribe" name="subscribe" value="news&offers">
+                        <label class="text-md">Get 25% OFF on Your Next Order</label>
                     </div>
-
-                    <div class="radio">
-                        <input type="radio" id="paypal"> Paypal
-                    </div>
+    
+                    <span class="text-sm"> Want exclusive deals? Check this box to receive the best offers to your phone. You can reply STOP to cancel or HELP for help. Msg frequency varies. Msg & data rates may apply. See Terms & Privacy.</span>
                 </div>
-                <div class="checkbox">
-                    <input type="checkbox" id="subscribe" name="subscribe" value="news&offers">
-                    <label>Get 25% OFF on Your Next Order</label>
+
+                <div style="justify-self: center; padding: 30px 30px;">
+                    <button class="btn complete"><img src="images/locked.svg">COMPLETE ORDER</button>
                 </div>
-                <span> Want exclusive deals? Check this box to receive the best offers to your phone. You can reply STOP to cancel or HELP for help. Msg frequency varies. Msg & data rates may apply. See Terms & Privacy.</span>
             </div>
 
 
@@ -139,7 +157,7 @@
                         </div>
                         <div class="item">
                             <div class="item-info">
-                                <img class="item-img" src="images/item1.png">
+                                <img class="item-img" src="images/item2.png">
                                 <span class="item-qty">1</span>
                             </div>
                             <div class="item-name"><p>Enchanted Lunar Lamp</p></div>
@@ -178,15 +196,6 @@
                             </svg>
                         </button>
                     </div>
-                </div>
-
-                <div class="trustpilot-widget" 
-                    data-locale="en-US" 
-                    data-template-id="53aa8912dec7e10d38f59f36" 
-                    data-businessunit-id="5400267300006400057a0113" 
-                    data-style-height="150px" 
-                    data-style-width="100%">
-                    <a href="https://www.trustpilot.com" target="_blank" rel="noopener">Trustpilot</a>
                 </div>
 
             </div>          
