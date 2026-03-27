@@ -7,9 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
         <body>
+        <form id="checkoutForm">
         <div class="container">
             <div class="main-container">
-                <form id="checkoutForm">
                 <div class="logo"><img class="logo-img" src="images/logo.svg"></div>
 
                 <div class="exp">
@@ -116,8 +116,9 @@
                         </label>
                     </div>
                 </div>
+            </div>
 
-
+            <div class="payment-container">
                 <div class="section">
                     <p class="section-title">Payment Information</p>
                     <p class="text-md">All transactions are secure and encrypted.</p>
@@ -165,51 +166,60 @@
             </div>
 
 
-            <div class="sub-container">
-                <div class="section">
-                    <div class="order-summary">
-                        <p class="section-title">Order Summary</p>
-                        
-                        <div>
-                            <div class="item">
-                                <div class="item-info">
-                                    <img class="item-img" src="images/item1.png">
-                                    <span class="item-qty">1</span>
+            <div class="side-summary">
+                <div class="order-toggle">
+                    <span>Order Summary</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+
+                <div class="order-content">
+                    <div class="section">
+                        <div class="order-summary">
+                            <p class="section-title order-title">Order Summary</p>
+                            
+                            <div>
+                                <div class="item">
+                                    <div class="item-info">
+                                        <img class="item-img" src="images/item1.png">
+                                        <span class="item-qty">1</span>
+                                    </div>
+                                    <div class="item-name"><p>Fairy Light Spirit Tree</p></div>
+                                    <div class="item-price"><p>$39.99</p></div>
                                 </div>
-                                <div class="item-name"><p>Fairy Light Spirit Tree</p></div>
-                                <div class="item-price"><p>$39.99</p></div>
-                            </div>
-                            <div class="item">
-                                <div class="item-info">
-                                    <img class="item-img" src="images/item2.png">
-                                    <span class="item-qty">1</span>
+                                <div class="item">
+                                    <div class="item-info">
+                                        <img class="item-img" src="images/item2.png">
+                                        <span class="item-qty">1</span>
+                                    </div>
+                                    <div class="item-name"><p>Enchanted Lunar Lamp</p></div>
+                                    <div class="item-price"><p>$39.99</p></div>
                                 </div>
-                                <div class="item-name"><p>Enchanted Lunar Lamp</p></div>
-                                <div class="item-price"><p>$39.99</p></div>
                             </div>
-                        </div>
 
-                        <hr/>
+                            <hr/>
 
-                        <div class="tax-info">
-                            <p>Tax</p>
-                            <p>$2.98</p>
-                        </div>
+                            <div class="tax-info">
+                                <p style="margin-top: 0px;">Tax</p>
+                                <p style="margin-top: 0px;">$2.98</p>
+                            </div>
 
-                        <div class="shipping-info">
-                            <p>Shipping</p>
-                            <p>$0.00</p>
-                        </div>
+                            <div class="shipping-info">
+                                <p>Shipping</p>
+                                <p>$0.00</p>
+                            </div>
 
-                        <hr/>
+                            <hr/>
 
-                        <div class="total-info">
-                            <p>Total</p>
-                            <p>$82.96</p>
+                            <div class="total-info">
+                                <p style="padding-bottom: 0px;">Total</p>
+                                <p style="padding-bottom: 0px;">$82.96</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+             </div>
 
+            <div class="side-discount">
                 <div class="section">
                     <div class="discount">
                         <p class="section-title">Discount Code</p>
@@ -224,7 +234,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div class="side-reviews">
                 <div class="section">
                     <div class="reviews">
                         <div class="trust-header">
@@ -298,8 +310,8 @@
                         </div>
                     </div>
                 </div>
-            </form> 
-            </div>         
+            </div>  
         </div>
+        </form>
     </body>
 </html>

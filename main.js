@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const toggle = document.querySelector(".order-toggle");
+    const sidesummary = document.querySelector(".side-summary");
+
+    if(toggle){
+        toggle.addEventListener("click", ()=>{
+            sidesummary.classList.toggle("active");
+        });
+    }
+
     const payment = document.querySelectorAll('input[name="payment"]');
     const creditFields = document.getElementById('creditFields');
 
