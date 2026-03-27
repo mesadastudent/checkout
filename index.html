@@ -28,13 +28,13 @@
                         <input type="email" id="email" placeholder="Email Address">
                         <div class="error-text"></div>
                     </div>
-                    <div>
+                    <div class="subscribe">
                         <input type="checkbox" id="subscribe" name="subscribe" value="news&offers">
                         <label class="offers">Email me with news and offers</label>
                     </div>
                 </div>
 
-                <div class="section">
+                <div class="section" style="margin-bottom: 54px;">
                     <p class="section-title">Shipping Address</p>
 
                     <div class="row">
@@ -42,22 +42,44 @@
                             <input type="text" id="fname" placeholder="First name">
                             <div class="error-text"></div>
                         </div>
-                        <div><input type="text" id="lname" placeholder="Last name" name="lname"></div>
+                        <div class="field">
+                            <input type="text" id="lname" placeholder="Last name">
+                            <div class="error-text"></div>
+                        </div>
                     </div>
 
-                    <select id="country" name="country" class="country-select">
-                        <option value="us">United States</option>
-                        <option value="ca">Canada</option>
-                        <option value="fr">France</option>
-                    </select>
+                    <div class="field">
+                        <select id="country" name="country" class="country-select">
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                            <option value="fr">France</option>
+                        </select>
+                        <div class="error-text"></div>
+                    </div>
 
-                    <input type="text" id="address" placeholder="Address" name="address">
-                    <input type="text" id="address1" placeholder="Apartment, suite, etc. (optional)" name="address1">
+                    <div class="field">
+                        <input type="text" id="address" placeholder="Address" name="address">
+                        <div class="error-text"></div>
+                    </div>
+
+                    <div class="field">
+                        <input type="text" id="address1" placeholder="Apartment, suite, etc. (optional)" name="address1">
+                        <div class="error-text"></div>
+                    </div>
 
                     <div class="row">
-                        <div><input type="text" id="city" placeholder="City" name="city"></div>
-                        <div><input type="text" id="state" placeholder="State" name="state"></div>
-                        <div><input type="text" id="zip" placeholder="Zip code" name="zip"></div>
+                        <div class="field">
+                            <div><input type="text" id="city" placeholder="City" name="city"></div>
+                            <div class="error-text"></div>
+                        </div>
+                        <div class="field">
+                            <div><input type="text" id="state" placeholder="State" name="state"></div>
+                            <div class="error-text"></div>
+                        </div>
+                        <div class="field">
+                            <div><input type="text" id="zip" placeholder="Zip code" name="zip"></div>
+                            <div class="error-text"></div>
+                        </div>
                     </div>
 
                     <input type="text" id="phone" placeholder="Phone" name="phone">
@@ -81,31 +103,56 @@
 
                         <div id="diffFields" class="billing-fields">
                             <div class="row">
-                                <div><input type="text" id="fname" placeholder="First name" name="fname"></div>
-                                <div><input type="text" id="lname" placeholder="Last name" name="lname"></div>
+                                <div class="field">
+                                    <input type="text" id="fname" placeholder="First name" name="fname">
+                                    <div class="error-text"></div>
+                                </div>
+                                <div class="field">
+                                    <input type="text" id="lname" placeholder="Last name" name="lname">
+                                    <div class="error-text"></div>
+                                </div>
                             </div>
 
-                            <select id="country" name="country" class="country-select">
-                                <option value="us">United States</option>
-                                <option value="ca">Canada</option>
-                                <option value="fr">France</option>
-                            </select>
+                            <div class="field">
+                                <select id="country" name="country" class="country-select">
+                                    <option value="us">United States</option>
+                                    <option value="ca">Canada</option>
+                                    <option value="fr">France</option>
+                                </select>
+                            </div>
 
-                            <input type="text" id="address" placeholder="Address" name="address">
-                            <input type="text" id="address1" placeholder="Apartment, suite, etc. (optional)" name="address1">
+                            <div class="field">
+                                <input type="text" id="address" placeholder="Address" name="address">
+                                <div class="error-text"></div>
+                            </div>
+                            <div class="field">
+                                <input type="text" id="address1" placeholder="Apartment, suite, etc. (optional)" name="address1">
+                                <div class="error-text"></div>
+                            </div>
 
                             <div class="row">
-                                <div><input type="text" id="city" placeholder="City" name="city"></div>
-                                <div><input type="text" id="state" placeholder="State" name="state"></div>
-                                <div><input type="text" id="zip" placeholder="Zip code" name="zip"></div>
+                                <div class="field">
+                                    <input type="text" id="city" placeholder="City" name="city">
+                                    <div class="error-text"></div>
+                                </div>
+                                <div class="field">
+                                    <input type="text" id="state" placeholder="State" name="state">   
+                                    <div class="error-text"></div>
+                                </div>
+                                <div class="field">
+                                    <input type="text" id="zip" placeholder="Zip code" name="zip"> 
+                                    <div class="error-text"></div>
+                                </div>
                             </div>
 
-                            <input type="text" id="phone" placeholder="Phone" name="phone">
+                            <div class="field">
+                                <input type="text" id="phone" placeholder="Phone" name="phone">
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="section">
+                <div class="section" style="margin-bottom: 44px;">
                     <p class="section-title">Shipping Method</p>
                     
                     <div class="shipping">
@@ -120,7 +167,7 @@
 
             <div class="payment-container">
                 <div class="section">
-                    <p class="section-title">Payment Information</p>
+                    <p class="section-title" style="margin-top: 0px;">Payment Information</p>
                     <p class="text-md">All transactions are secure and encrypted.</p>
 
                     <div class="payment">
@@ -131,31 +178,44 @@
                         </label>
 
                         <div id="creditFields" class="credit-fields">
-                            <input type="text" id="creditNum" placeholder="Card Number" name="creditNum">
-                            <input type="text" id="creditName" placeholder="Name on card" name="creditName">
+                            <div class="field">
+                                <input type="text" id="creditNum" placeholder="Card Number" name="creditNum">
+                                <div class="error-text"></div>
+                            </div>
+                            <div class="field">
+                                <input type="text" id="creditName" placeholder="Name on card" name="creditName">
+                                <div class="error-text"></div>
+                            </div>
 
                             <div class="row">
-                                <div><input type="text" id="creditExp" placeholder="Expiry date (MM / YY)" name="creditExp"></div>
-                                <div><input type="text" id="creditSec" placeholder="Security code" name="creditSec"></div>
+                                <div class="field">
+                                    <input type="text" id="creditExp" placeholder="Expiry date (MM / YY)" name="creditExp">
+                                    <div class="error-text"></div>
+                                </div>
+                                <div class="field" style="margin-bottom: 0px;">
+                                    <input type="text" id="creditSec" placeholder="Security code" name="creditSec">
+                                    <div class="error-text"></div>
+                                </div>
                             </div>
                         </div>
 
-                        <label class="radio-option">
+                        <label class="radio-option" style="padding-top: 17px; padding-bottom: 18px;">
                             <input type="radio" name="payment" value="paypal">
                             <span class="custom-radio"></span>
-                            <span class="radio-text">paypal</span>
+                            <img src="images/paypal-logo.svg" style="height: 24px;">
                         </label>
                     </div>
 
                     <div style="padding-top: 15px;">
                         <input type="checkbox" id="subscribe" name="subscribe" value="news&offers">
+                        <span class="custom-checkbox"></span>
                         <label class="text-md">Get 25% OFF on Your Next Order</label>
                     </div>
     
                     <span class="text-sm"> Want exclusive deals? Check this box to receive the best offers to your phone. You can reply STOP to cancel or HELP for help. Msg frequency varies. Msg & data rates may apply. See Terms & Privacy.</span>
                 </div>
 
-                <div style="justify-self: center; padding: 30px 30px;">
+                <div style="display:flex; justify-self: center; padding: 30px 30px; justify-content: center;">
                     <button type="submit" class="complete">
                         <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
                             <img src="images/locked.svg">
@@ -173,7 +233,7 @@
                 </div>
 
                 <div class="order-content">
-                    <div class="section">
+                    <div class="section" style="margin-bottom: 0px;">
                         <div class="order-summary">
                             <p class="section-title order-title">Order Summary</p>
                             
@@ -199,30 +259,31 @@
                             <hr/>
 
                             <div class="tax-info">
-                                <p style="margin-top: 0px;">Tax</p>
-                                <p style="margin-top: 0px;">$2.98</p>
+                                <p style="margin-top: 24x; margin-bottom: 10px; height: 14px;">Tax</p>
+                                <p style="margin-top: 24px; margin-bottom: 10px; height: 14px;">$2.98</p>
                             </div>
 
                             <div class="shipping-info">
-                                <p>Shipping</p>
-                                <p>$0.00</p>
+                                <p style="margin-top: 10px; margin-bottom: 24px; height: 14px;">Shipping</p>
+                                <p style="margin-top: 10px; margin-bottom: 24px; height: 14px;">$0.00</p>
                             </div>
 
                             <hr/>
 
                             <div class="total-info">
-                                <p style="padding-bottom: 0px;">Total</p>
-                                <p style="padding-bottom: 0px;">$82.96</p>
+                                <p style="margin-top: 25px; margin-bottom: 0px; height: 14px;">Total</p>
+                                <p style="margin-top: 25px; margin-bottom: 0px; height: 14px;">$82.96</p>
                             </div>
                         </div>
+                        <hr/>
                     </div>
                 </div>
              </div>
 
             <div class="side-discount">
-                <div class="section">
+                <div class="section" style="margin-bottom: 39px;">
                     <div class="discount">
-                        <p class="section-title">Discount Code</p>
+                        <p class="section-title" style="margin-top: 0px;">Discount Code</p>
                         <div class="discount-info">
                             <input type="text" id="disc" placeholder="Discount code" name="disc">
                             <button class="btn-disc">
