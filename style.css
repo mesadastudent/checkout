@@ -490,11 +490,13 @@ input.error {
 .item-qty {
     position: absolute;
     font-size: 14px;
-    top: -8px;
-    right: -10px;
+    top: -10px;
+    right: -12px;
     color: #fff;
+    height: 16px;
+    width: 16px;
     background-color: #808080;
-    padding: 3px 8px;
+    padding: 5px 1px 5px 9px;
     border-radius: 50%;
 }
 
@@ -502,6 +504,14 @@ input.error {
     flex: 1;
     padding-left: 10px;
     font-size: 16px;
+}
+
+.item-name p{
+    width: 122px;
+}
+
+.item-price span {
+    display: none;
 }
 
 .tax-info {
@@ -684,7 +694,6 @@ input.error {
     align-items: center;
     padding: 14px 20px;
     border-bottom: 1px solid #ddd;
-    font-weight: 600;
     cursor: pointer;
     background: #fafafa;
 }
@@ -698,7 +707,12 @@ input.error {
 }
 
 .toggle-icon {
-    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease;
+    transform-origin: center;
+    transform-box: fill-box;
 }
 
 .order-content {
@@ -813,6 +827,7 @@ input.error {
         display: flex;
         align-items: center;
         margin-bottom: 23px;
+        font-size: 16px;
     }
 
     .item-last{
@@ -820,6 +835,13 @@ input.error {
         align-items: center;
         margin-bottom: 29px;
     }
+
+    .item-price span {
+        display: inline;
+        padding-right: 13px;
+        color: #9E9E9E;
+        text-decoration: line-through;
+    }    
 
     .tax-info {
         display: flex;
