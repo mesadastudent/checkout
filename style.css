@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Avenir LT Pro', Helvetica, Arial, sans-serif;
+    font-family: "Avenir LT Pro", Helvetica, Arial, sans-serif;
     margin: 0px;
     color: #292929;
     overflow-x: hidden;
@@ -77,6 +77,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #fff;
 }
 
 .footer p{
@@ -212,6 +213,7 @@ hr {
 
 .section-payment {
     margin-bottom: 0px;
+    border-bottom: 1px solid #D9D9D9;
 }
 
 .section-title {
@@ -247,8 +249,8 @@ hr {
 input,
 select,
 button {
-    font-family: 'Avenir LT Pro';
-    padding: 10px;
+    font-family: "Avenir LT Pro";
+    padding: 10px 15px;
     border: 1px solid #D9D9D9;
     border-radius: 8px;
 }
@@ -261,11 +263,59 @@ select {
     height: 48px;
 }
 
-/* 
-input[type="checkbox"] input[type="radio"] {
-    width: 22px;
-    height: 22px;
-} */
+.select-field {
+    position: relative;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.select-field select {
+    width: 100%;
+    padding: 20px 40px 6px 15px;
+    font-size: 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg width='10' height='10' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'><path d='M0 3H10L5 8Z' fill='%23919191'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+.select-field label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    font-size: 14px;
+    color: #6b6b6b;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.select-field select:valid + label,
+.select-field select:focus + label {
+    top: 6px;
+    font-size: 11px;
+    color: #6b6b6b;
+}
+
+.select-field::before {
+    content: "";
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 1px;
+    background: #dcdcdc;
+}
+
+
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: #1B1B1B;
+    cursor: pointer;
+}
 
 input[type="radio"] {
     accent-color: black;
@@ -275,6 +325,26 @@ input[type="radio"] {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
+}
+
+.field-container > div {
+    position: relative;
+}
+  
+#phone {
+    width: 100%;
+    padding-right: 35px;
+    height: 40px;
+}
+  
+.field-container img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
 }
 
 .error-text {
@@ -302,6 +372,7 @@ input.error {
     font-family: 'Abel';
     font-size: 14px;
     color: #737373;
+    padding-left: 5.5px;
 }
 
 .row {
@@ -406,8 +477,8 @@ input.error {
 }
 
 .billing-fields {
-    display: none;
-    padding: 16px 16px 0px 16px;
+    display: block;
+    padding: 16px;
     background-color: #FAFAFA;
 }
 
@@ -419,7 +490,7 @@ input.error {
 }
 
 .credit-fields {
-    display: none;
+    display: block;
     padding: 15px 16px 0px 16px;
     background-color: #FAFAFA;
     border-bottom: 1px solid #D9D9D9;
@@ -439,7 +510,6 @@ input.error {
     justify-self: center;
     padding: 40px 30px 52px 30px;
     justify-content: center;
-    border-bottom: 1px solid #D9D9D9;
 }
 
 .complete {
@@ -451,14 +521,17 @@ input.error {
 
 .side-summary {
     grid-area: sidesummary;
+    background-color: #FAFAFA;;
 }
 
 .side-discount {
     grid-area: sidediscount;
+    background-color: #FAFAFA;;
 }
 
 .side-reviews {
     grid-area: sidereviews;
+    background-color: #FAFAFA;;
 }
 
 .order-summary {
@@ -504,10 +577,6 @@ input.error {
     flex: 1;
     padding-left: 10px;
     font-size: 16px;
-}
-
-.item-name p{
-    width: 122px;
 }
 
 .item-price span {
@@ -560,7 +629,9 @@ input.error {
 }
 
 .btn-disc {
-    width: 50px;
+    width: 61px;
+    height: 48px;
+    background-color: #CCCCCC;
 }
 
 #disc {
@@ -569,9 +640,9 @@ input.error {
 }
 
 .reviews {
-    background: #F7F7F7;
-    padding: 15px;
-    margin: 0 17px;
+    background: #FAFAFA;
+    padding: 0px 15px 15px 15px;
+    margin: 0 37px;
 }
 
 .discount {
@@ -720,8 +791,9 @@ input.error {
 }
 
 .subscribe {
-    display: block;
+    display: flex;
     height: 24px;
+    align-items: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -741,6 +813,7 @@ input.error {
         auto
         auto
         auto;
+        background: #fff;
     }
 
     .main-container {
@@ -751,6 +824,7 @@ input.error {
 
     .footer {
         grid-area: footer;
+        background: #fff;
         padding: 22px 22px 42px 22px;
     }
 
@@ -788,6 +862,7 @@ input.error {
 
     .side-discount {
         width: 100%;
+        margin-bottom: 39px;
     }
 
     .order-toggle {
@@ -891,7 +966,7 @@ input.error {
 
     #disc {
         flex: 1;
-        line-height: 48px;
+        height: 46px;
     }
 
     .discount {
@@ -948,13 +1023,13 @@ input.error {
     }
 
     .billing-fields {
-        display: none;
+        display: block;
         padding: 16px 16px 9px 16px;
         background-color: #FAFAFA;
     }
 
     .credit-fields {
-        display: none;
+        display: block;
         padding: 18px 16px 18px 16px;
         background-color: #FAFAFA;
         border-bottom: 1px solid #D9D9D9;
@@ -1001,21 +1076,30 @@ input.error {
         margin-bottom: 37px;
     }
 
+    .section-discount {
+        margin-bottom: 0px;
+    }
+
     .section-shipping {
         margin-bottom: 44px;
     }
 
     .section-payment {
         margin-bottom: 0px;
+        border-bottom: 0px;
     }
 
     .section-title {
         font-size: 17px;
-        font-weight: 600;
         color: #292929;
         margin-top: 15px;
         height: 18px;
-        margin-bottom: 26px;
+        margin-bottom: 25px;
+        margin-left: 1px;
+        letter-spacing: 0%;
+        font-weight: 800;
+        line-height: 28px;
+        letter-spacing: 0;
     }
     
     .section-title-order {
@@ -1027,11 +1111,11 @@ input.error {
     }
 
     .section-title-disc {
-        font-size: 20px;
-        font-weight: 600;
+        font-size: 17px;
+        font-weight: 800;
         color: #292929;
         height: 18px;
-        margin-block: 18px;
+        margin-bottom: 25px;
     }
 
     .section-title-trust {
@@ -1041,7 +1125,7 @@ input.error {
     input,
     select,
     button {
-        font-family: 'Avenir LT Pro';
+        font-family: "Avenir LT Pro";
         padding: 10px;
         border: 1px solid #D9D9D9;
         border-radius: 8px;

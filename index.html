@@ -48,14 +48,13 @@
                         </div>
                     </div>
 
-                    <div class="field">
-                        <select id="country" name="country" class="country-select">
-                            <option value="us">United States</option>
-                            <option value="ca">Canada</option>
-                            <option value="fr">France</option>
+                    <div class="select-field">
+                        <select required>
+                          <option>United States</option>
+                          <option>Philippines</option>
                         </select>
-                        <div class="error-text"></div>
-                    </div>
+                        <label>Country</label>
+                      </div>
 
                     <div class="field">
                         <input type="text" id="address" placeholder="Address" name="address">
@@ -81,8 +80,13 @@
                             <div class="error-text"></div>
                         </div>
                     </div>
-
-                    <input type="text" id="phone" placeholder="Phone" name="phone">
+                    <div class="field-container">
+                        <div>
+                            <input type="text" id="phone" placeholder="Phone" name="phone"> 
+                            <img src="images/question.svg">
+                        </div>
+                        <div class="error-text"></div>
+                    </div>
                 </div>
 
                 <div class="section">
@@ -96,7 +100,7 @@
                         </label>
                             
                         <label class="radio-option">
-                            <input type="radio" name="billing" value="different" checked>
+                            <input type="radio" name="billing" value="different" checked="checked">
                             <span class="custom-radio"></span>
                             <span class="radio-text">Use a different billing address</span>
                         </label>
@@ -113,12 +117,12 @@
                                 </div>
                             </div>
 
-                            <div class="field">
-                                <select id="country" name="country" class="country-select">
-                                    <option value="us">United States</option>
-                                    <option value="ca">Canada</option>
-                                    <option value="fr">France</option>
+                            <div class="select-field">
+                                <select required>
+                                  <option>United States</option>
+                                  <option>Philippines</option>
                                 </select>
+                                <label>Country</label>
                             </div>
 
                             <div class="field">
@@ -145,9 +149,14 @@
                                 </div>
                             </div>
 
-                            <div class="field">
-                                <input type="text" id="phone" placeholder="Phone" name="phone">
+                                <div class="field-container">
+                                    <div>
+                                        <input type="text" id="phone" placeholder="Phone" name="phone"> 
+                                        <img src="images/question.svg">
+                                    </div>
+                                <div class="error-text"></div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -173,7 +182,7 @@
                     <div class="payment">
                         <div class="option-payment">
                             <label class="radio-option">
-                                <input type="radio" name="payment" value="credit">
+                                <input type="radio" name="payment" value="credit" checked="checked">
                                 <span class="custom-radio"></span>
                                 <span class="radio-text">Credit Card</span>
                             </label>
@@ -195,8 +204,12 @@
                                     <input type="text" id="creditExp" placeholder="Expiry date (MM / YY)" name="creditExp">
                                     <div class="error-text"></div>
                                 </div>
-                                <div class="field" style="margin-bottom: 0px;">
-                                    <input type="text" id="creditSec" placeholder="Security code" name="creditSec">
+
+                                <div class="field-container" style="margin-bottom: 0px;">
+                                    <div>
+                                        <input type="text" id="creditSec" placeholder="Security code" name="creditSec">
+                                        <img src="images/question.svg">
+                                    </div>
                                     <div class="error-text"></div>
                                 </div>
                             </div>
@@ -261,7 +274,7 @@
                                         <img class="item-img" src="images/item1.png">
                                         <span class="item-qty">1</span>
                                     </div>
-                                    <div class="item-name"><p>Fairy Light Spirit Tree</p></div>
+                                    <div class="item-name"><p style="width: 120px;">Fairy Light Spirit Tree</p></div>
                                     <div class="item-price"><span>$79.99</span>$39.99</div>
                                 </div>
                                 <div class="item-last">
@@ -269,7 +282,7 @@
                                         <img class="item-img" src="images/item2.png">
                                         <span class="item-qty">1</span>
                                     </div>
-                                    <div class="item-name"><p>Enchanted Lunar Lamp</p></div>
+                                    <div class="item-name"><p style="width: 122px;">Enchanted Lunar Lamp</p></div>
                                     <div class="item-price"><span>$79.99</span>$39.99</div>
                                 </div>
                             </div>
@@ -299,7 +312,7 @@
              </div>
 
             <div class="side-discount">
-                <div class="section" style="margin-bottom: 39px;">
+                <div class="section-discount">
                     <div class="discount">
                         <p class="section-title-disc" style="margin-top: 0px;">Discount Code</p>
                         <div class="discount-info">
